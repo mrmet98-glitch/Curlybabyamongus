@@ -1,0 +1,16 @@
+{
+  "name": "irl-among-us",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create irl-among-us-db",
+    "db:migrate:local": "wrangler d1 execute irl-among-us-db --local --file=./schema.sql",
+    "db:migrate:remote": "wrangler d1 execute irl-among-us-db --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.45.0"
+  }
+}
